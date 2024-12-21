@@ -8,10 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <div id="loading-screen">
+    <div class="loader"></div>
+  </div>
+
   <header>
     <nav>
       <ul>
-        <li><a href="#hero">Home</a></li>
+        <li><a href="#" onclick="scrollToTop(); return false;">Home</a></li>
         <li><a href="#about">About Callie</a></li>
         <li><a href="#gallery">Gallery</a></li>
         <li><a href="#memories">Memories</a></li>
@@ -31,6 +36,9 @@
 
     <section id="about" class="animate-slide-up">
       <h2>About Callie</h2>
+      <p> 
+        [Insert short video or slideshow of Callie here]
+      </p>
       <p>
         Callie was more than a pet—she was family. Her playful pounces, gentle purrs, and comforting cuddles brought warmth to my soul. 
         She taught me the true meaning of unconditional love, and I’ll forever be grateful for every moment I spent with her. ❤️
@@ -75,11 +83,19 @@
       <p>
         She may not be with me now, but her spirit lives on in every smile, every warm memory, and every heartbeat. ❤️
       </p>
+      <div id="share-memories">
+        <h3>Share Your Memories</h3>
+        <p>Leave a message about Callie:</p>
+        <textarea id="memory-message"></textarea>
+        <button>Submit</button> 
+      </div>
     </section>
   </main>
 
   <footer>
     <p>Made with love and devotion for Callie. 🐾</p>
   </footer>
+
+  <script src="script.js"></script> 
 </body>
 </html>
