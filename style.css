@@ -1,108 +1,57 @@
+/* ... (existing CSS) ... */
+
 body {
-  font-family: 'Lora', serif;
-  color: #333;
-  background-color: #f8f0e3; /* Soft cream color */
-  margin: 0;
-  padding: 0;
+  background-image: url('clouds.jpg'); /* Replace with your chosen background image */
+  background-size: cover;
+  background-attachment: fixed; 
 }
 
-header {
-  text-align: center;
-  padding: 20px 0;
-  background-color: #ffe6e6; /* Light pink */
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
   display: flex;
   justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-nav li {
-  margin: 0 15px;
+.loader {
+  border: 16px solid #f3f3f3; /* Light gray */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
 }
 
-nav a {
-  color: #333;
-  text-decoration: none;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-h1, h2 {
-  color: #990033; /* Deep rose */
-  margin-bottom: 10px;
+/* ... (rest of the CSS) ... */
+
+/* Lightbox CSS (basic example) */
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
 }
 
-p {
-  margin-bottom: 15px;
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
 }
 
-blockquote {
-  border-left: 5px solid #990033;
-  padding-left: 15px;
-  margin: 15px 0;
-  font-style: italic;
-}
-
-.hero-content {
-  text-align: center;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.photo-frame {
-  display: inline-block;
-  margin: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.photo-frame img {
-  width: 200px;
-  height: auto;
-}
-
-.gallery {
-  text-align: center;
-}
-
-/* Animations */
-.animate-fade-in {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.animate-fade-in.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.animate-slide-up {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-}
-
-.animate-slide-up.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsive Design (Basic) */
-@media (max-width: 768px) {
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .photo-frame {
-    width: 45%;
-    margin: 10px 5%;
-  }
-}
+/* ... (rest of the CSS) ... */
